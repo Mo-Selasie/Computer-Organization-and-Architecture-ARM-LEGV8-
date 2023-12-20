@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity FUMUX64 is -- Two by one mux with 64 bit inputs/outputs
+entity FUMUX64 is -- Three by one mux with 64 bit inputs/outputs that picks the source of operands based on select value
 port(
     in00    : in STD_LOGIC_VECTOR(63 downto 0); -- sel == 00
     in01    : in STD_LOGIC_VECTOR(63 downto 0); -- sel == 01
