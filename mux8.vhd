@@ -2,7 +2,8 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity MUX8 is -- Two by one mux with 5 bit inputs/outputs
+entity MUX8 is -- Multiplexer for cpu control
+    --Used to insert NOP signals in program
 port(
     mem_in : in STD_LOGIC_VECTOR(3 downto 0);
     exec_in : in std_logic_vector(2 downto 0);
