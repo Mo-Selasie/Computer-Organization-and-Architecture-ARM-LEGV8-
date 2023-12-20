@@ -2,7 +2,8 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity MUX10 is -- Two by one mux with 5 bit inputs/outputs
+entity MUX10 is -- Two by one mux with 10 bit inputs/outputs for cpu control
+    --Used to insert NOP instruction signals
 port(
     in0    : in STD_LOGIC_VECTOR(9 downto 0); -- sel == 0
     in1    : in STD_LOGIC_VECTOR(9 downto 0); -- sel == 1
