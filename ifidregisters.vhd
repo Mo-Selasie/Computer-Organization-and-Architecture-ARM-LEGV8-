@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity IFID is
+entity IFID is --Register file for IF/ID pipeline
 port(
      clk          : in  STD_LOGIC; 
      write_enable : in  STD_LOGIC; 
