@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity IDEX is
+entity IDEX is --Register file for ID/EX pipeline
 port(
     clk          : in  STD_LOGIC; 
     write_enable : in  STD_LOGIC; 
@@ -30,6 +30,7 @@ end IDEX;
 
 
 architecture Behavioral of IDEX is
+    --Registers
     signal RD1_Register : STD_LOGIC_VECTOR(63 downto 0); 
     signal RD2_Register : STD_LOGIC_VECTOR(63 downto 0); 
     signal SIGNEXTEND_Register : STD_LOGIC_VECTOR(63 downto 0); 
@@ -43,7 +44,7 @@ architecture Behavioral of IDEX is
 begin
     process (clk, rst)
     begin
-        if rst = '1' then
+        if rst = '1' then --Asynchronous reset
             RD1_Register <= (others => '0'); 
             RD2_Register <= (others => '0'); 
             SIGNEXTEND_Register <= (others => '0'); 
