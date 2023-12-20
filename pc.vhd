@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity PC is -- 32-bit rising-edge triggered register with write-enable and synchronous reset
+entity PC is -- 64-bit rising-edge triggered register with write-enable and synchronous reset
 port(
      clk          : in  STD_LOGIC; -- Propogate AddressIn to AddressOut on rising edge of clock
      write_enable : in  STD_LOGIC; -- Only write if '1'
