@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity EXMEM is
+entity EXMEM is --register file for ex/mem pipeline
 port(
     clk          : in  STD_LOGIC; 
     write_enable : in  STD_LOGIC; 
@@ -24,6 +24,7 @@ end EXMEM;
 
 
 architecture Behavioral of EXMEM is
+    --Registers
     signal ALU_Register : STD_LOGIC_VECTOR(63 downto 0); 
     signal RD2_Register : STD_LOGIC_VECTOR(63 downto 0); 
     signal SHIFT_Register : STD_LOGIC_VECTOR(63 downto 0); 
