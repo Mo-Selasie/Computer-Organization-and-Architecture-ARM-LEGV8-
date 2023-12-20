@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ForwardingUnit is
+entity ForwardingUnit is --Unit determines alu operands sources
     port(
         EX_MEM_regwrite : in std_logic;
         MEM_WB_regwrite : in std_logic;
