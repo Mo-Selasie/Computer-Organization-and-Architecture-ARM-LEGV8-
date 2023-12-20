@@ -6,15 +6,15 @@ port(
      clk          : in  STD_LOGIC; -- Propogate m_in to m_out on rising edge of clock
      write_enable : in  STD_LOGIC; -- Only write if '1'
      rst          : in  STD_LOGIC; -- Asynchronous reset! Sets m_out to 0x0
-     m_in    : in  STD_LOGIC_VECTOR(3 downto 0); -- Next Mem address
-     m_out   : out STD_LOGIC_VECTOR(3 downto 0) -- Current Mem address
+     m_in    : in  STD_LOGIC_VECTOR(3 downto 0); 
+     m_out   : out STD_LOGIC_VECTOR(3 downto 0) 
 );
 end Mem;
 
 
 
 architecture Behavioral of Mem is
-    signal M_Register : STD_LOGIC_VECTOR(3 downto 0); -- PC register
+    signal M_Register : STD_LOGIC_VECTOR(3 downto 0); 
 
 begin
     process (clk, rst)
