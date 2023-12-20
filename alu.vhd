@@ -3,10 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity ALU is
--- Implement: AND, OR, ADD (signed), SUBTRACT (signed)
--- as described in Section 4.4 in the textbook.
--- The functionality of each instruction can be found on the 'ARM Reference Data' sheet at the
---    front of the textbook (or the Green Card pdf on Canvas).
+-- Implement: AND, OR, ADD (signed), SUBTRACT, and all other alu operations for Legv8
 port(
      in0       : in     STD_LOGIC_VECTOR(63 downto 0);
      in1       : in     STD_LOGIC_VECTOR(63 downto 0);
@@ -31,16 +28,10 @@ architecture behavioral of ALU is
     signal const : std_logic_vector(63 downto 0) := X"0000000000000001";
     signal in1_twos : std_logic_vector(63 downto 0);
 
-    -- signal land : std_logic_vector(63 downto 0);
-    -- signal lor : std_logic_vector(63 downto 0);
-
     begin
         addition : ADD port map (in0, in1, sum);
         twos : ADD port map (not in1, const, in1_twos);
         subtraction : ADD port map (in0, in1_twos, diff);
-
-        -- land <= in0 and in1;
-        -- lor <= in0 or in1;
 
         process(in1, in0, operation, sum, diff, result)
         begin
