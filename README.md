@@ -7,7 +7,6 @@ Final Project EE0025 with Professor Mark Hempstead
 - [Features](#features)
 - [Architecture](#architecture)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
 
 ## Introduction
 Hello! This project is a Pipelined ARM-LEGv8 CPU Architecture Implementation project, a comprehensive VHDL-based simulation of a modern pipelined processor. This project is an endeavor to create a fully functional model of a CPU based on the ARM architecture, specifically tailored to the LEGv8 instruction set, a learning-focused variant of ARMv8 that only implements a section of the alu operations. The primary goal is to provide a detailed and interactive educational tool that demonstrates the intricate workings of a pipelined CPU.
@@ -22,12 +21,8 @@ This current implementation does not make use of branch detection units, hence b
 A first version which does not include any pipelining is also included to test the basic functionality of the cpu. 
 
 ## Usage
-To use `PipelinedCPU1` in your VHDL project:
-1. **Include the Entity**: Make sure `PipelinedCPU1` is included in your VHDL project files.
-2. **Instantiate the Entity**: Create an instance of `PipelinedCPU1` in your VHDL testbench or top-level file.
-3. **Connect the Ports**: Map the external signals to the entity's ports appropriately.
-4. **Simulate**: Run the simulation using your preferred VHDL simulator (e.g., ModelSim, GHDL).
-With GHDL, run *make p1* or *make p2* to run either imem entities, then run 
+Run the simulation using your preferred VHDL simulator (e.g., ModelSim, GHDL).
+With GHDL, run *make p1* or *make p2* to run either imem entities, then run *make clean* to clean .ghw files afterwards.
 
 ## Features
 - **Pipelined Architecture**: Implements a basic pipelined structure, enhancing processing speed and efficiency.
@@ -36,7 +31,7 @@ With GHDL, run *make p1* or *make p2* to run either imem entities, then run
 - **Signal Flow Control**: Implements various control signals for managing data flow and operations within the pipeline.
 
 ## Architecture
-The architecture `structural` of `PipelinedCPU1` includes:
+The architecture `structural` of the main `PipelinedCPU1` includes:
 - Signal declarations for internal operations.
 - Component definitions for Instruction Memory (IMEM), Program Counter (PC), ALU, Registers, and various multiplexers and control units.
 - Mapping of these components to the defined signals.
